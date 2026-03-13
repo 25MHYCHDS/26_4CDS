@@ -237,7 +237,7 @@ Node;AmplifyShaderEditor.PannerNode;29;-2534.132,-93.82541;Inherit;False;3;0;FLO
 Node;AmplifyShaderEditor.TextureCoordinatesNode;28;-2885.944,44.99026;Inherit;False;0;8;4;3;2;SAMPLER2D;;False;0;FLOAT2;1,1;False;1;FLOAT2;0,0;False;5;FLOAT4;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4
 Node;AmplifyShaderEditor.TextureCoordinatesNode;33;-2341.372,-25.57021;Inherit;False;2;-1;4;3;2;SAMPLER2D;;False;0;FLOAT2;1,1;False;1;FLOAT2;0,0;False;5;FLOAT4;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4
 Node;AmplifyShaderEditor.DynamicAppendNode;31;-1728.8,224.5363;Inherit;False;FLOAT2;4;0;FLOAT;0;False;1;FLOAT;0;False;2;FLOAT;0;False;3;FLOAT;0;False;1;FLOAT2;0
-Node;AmplifyShaderEditor.ColorNode;41;-1007.95,-491.7656;Inherit;False;Property;_end;end;5;0;Create;True;0;0;0;False;0;False;0.2222657,0.09803923,0.7490196,0;0,0,0,0;True;0;5;COLOR;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4
+Node;AmplifyShaderEditor.ColorNode;41;-1035.95,-662.9656;Inherit;False;Property;_end;end;5;0;Create;True;0;0;0;False;0;False;0.2222657,0.09803923,0.7490196,0;0,0,0,0;True;0;5;COLOR;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4
 WireConnection;2;0;1;4
 WireConnection;2;1;3;0
 WireConnection;6;0;7;4
@@ -291,4 +291,4 @@ WireConnection;29;0;21;0
 WireConnection;31;0;30;0
 WireConnection;31;1;32;0
 ASEEND*/
-//CHKSM=7060DE11B85EC763B437D66239A4E5612338422A
+//CHKSM=A021409FD32763C8B92A6C9D8A16B84A665C5C25
