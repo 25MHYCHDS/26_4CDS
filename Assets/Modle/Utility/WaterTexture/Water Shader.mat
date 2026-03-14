@@ -26,14 +26,14 @@ Material:
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
   m_InvalidKeywords: []
-  m_LightmapFlags: 4
+  m_LightmapFlags: 0
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
+  m_CustomRenderQueue: 3000
   stringTagMap: {}
   disabledShaderPasses:
   - MOTIONVECTORS
-  m_LockedProperties: 
+  m_LockedProperties: :m_EnableInstancingVariants
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
@@ -63,25 +63,25 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _Float: -0.19
-    - _Float_1: 3.04
+    - _Float: 0
+    - _Float_1: 3.05
     - _Float_2: 15.21
     - _Float_3: 0
-    - _NormalS: 0.11
+    - _NormalS: 0.1
     - _QueueControl: 0
     - _QueueOffset: 0
     - _RScale: 1
     - _RSpeed: 1
     - _RStr: 0.1
-    - _Smoothness: 0.7
-    - _WaveSpeed: 1
+    - _Smoothness: 0.71
+    - _WaveSpeed: 0.3
     - __dirty: 0
     m_Colors:
-    - _Color: {r: 0.171698, g: 1, b: 0.72542477, a: 0.34117648}
-    - _Color_1: {r: 0.1306015, g: 0.7595077, b: 0.83396226, a: 0.7137255}
+    - _Color: {r: 0.261666, g: 0.96981126, b: 0.6932974, a: 0.2901961}
+    - _Color_1: {r: 0.32753995, g: 0.8828368, b: 0.96981126, a: 0.62352943}
     - _Color_2: {r: 1, g: 1, b: 1, a: 0}
-    - _Scale: {r: 8.84, g: 9.99, b: 0, a: 0}
-    - _Scale2: {r: 22.53, g: 25.4, b: 0, a: 0}
-    - _WaveD: {r: -1, g: 1, b: 0, a: 0}
+    - _Scale: {r: 2, g: 3, b: 0, a: 0}
+    - _Scale2: {r: 1, g: 1, b: 0, a: 0}
+    - _WaveD: {r: 1, g: 1.71, b: 0, a: 0}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
