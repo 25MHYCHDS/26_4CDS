@@ -51,53 +51,56 @@ public class CameraManager : MonoBehaviour
 
     void Update()
     {
-        if(EnemyLookPoint != null)
+        if(PlayerCamera != null)
         {
-            IsAiming = Vector3.Distance(EnemyLookPoint.transform.localToWorldMatrix.GetPosition(), Player.instance.transform.position) > MaxDistance;
-            EnemyScreenP = new Vector2(Camera.main.WorldToScreenPoint(EnemyLookPoint.transform.localToWorldMatrix.GetPosition()).x,
-            Camera.main.WorldToScreenPoint(EnemyLookPoint.transform.localToWorldMatrix.GetPosition()).y);
-
-            if (JudgeEnemyScreenP() || IsAiming)
+            if (EnemyLookPoint != null)
             {
-                CameraAimCoolDown = true;
+                IsAiming = Vector3.Distance(EnemyLookPoint.transform.localToWorldMatrix.GetPosition(), Player.instance.transform.position) > MaxDistance;
+                EnemyScreenP = new Vector2(Camera.main.WorldToScreenPoint(EnemyLookPoint.transform.localToWorldMatrix.GetPosition()).x,
+                Camera.main.WorldToScreenPoint(EnemyLookPoint.transform.localToWorldMatrix.GetPosition()).y);
 
-                SetLookPointOffset(0);
-
-                return;
-            }
-
-            if (CameraAimCoolDown == true)
-            {
-                Timer -= Time.deltaTime;
-
-                if (Timer < 0)
+                if (JudgeEnemyScreenP() || IsAiming)
                 {
-                    CameraAimCoolDown = false;
-                    Timer = AimWaitTime;
+                    CameraAimCoolDown = true;
+
+                    SetLookPointOffset(0);
+
+                    return;
+                }
+
+                if (CameraAimCoolDown == true)
+                {
+                    Timer -= Time.deltaTime;
+
+                    if (Timer < 0)
+                    {
+                        CameraAimCoolDown = false;
+                        Timer = AimWaitTime;
+                    }
+                }
+
+                //锁定下的相机云台
+                if ((Input.mousePositionDelta.Abs().x + Input.mousePositionDelta.Abs().y) < MaxMouseDelta
+                    && CameraAimCoolDown == false)
+                {
+                    SetLookPointOffset(0.5f);
+
+                    //if (JudgeEnemyScreenPC() && Focus == false)
+                    //{
+                    //    return;
+                    //}
+
+                    UpdateTargetRotateData(GetTargetDirectionAngle(GetTargetDirection(EnemyLookPoint.transform.localToWorldMatrix.GetPosition(), Player.instance.transform.position)));
+
+                    RotateToTagetDri();
+                }
+                else
+                {
+                    CameraAimCoolDown = true;
+                    Focus = false;
                 }
             }
-
-            //锁定下的相机云台
-            if ((Input.mousePositionDelta.Abs().x + Input.mousePositionDelta.Abs().y) < MaxMouseDelta
-                && CameraAimCoolDown == false)
-            {
-                SetLookPointOffset(0.5f);
-
-                //if (JudgeEnemyScreenPC() && Focus == false)
-                //{
-                //    return;
-                //}
-
-                UpdateTargetRotateData(GetTargetDirectionAngle(GetTargetDirection(EnemyLookPoint.transform.localToWorldMatrix.GetPosition(), Player.instance.transform.position)));
-
-                RotateToTagetDri();
-            }
-            else
-            {
-                CameraAimCoolDown = true;
-                Focus = false;
-            }
-        }
+        } 
     }
 
     //获取目标方向
