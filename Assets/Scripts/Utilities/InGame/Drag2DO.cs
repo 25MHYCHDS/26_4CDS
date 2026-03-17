@@ -9,12 +9,6 @@ public class Drag2DO : MonoBehaviour
 
     [SerializeField] private bool IsSelected;
 
-
-    private void Start()
-    {
-        Player.instance.moveStateMachine.Player.Input.gamePlayActions.Disable();
-    }
-
     private void Update()
     {
         if (IsSelected)

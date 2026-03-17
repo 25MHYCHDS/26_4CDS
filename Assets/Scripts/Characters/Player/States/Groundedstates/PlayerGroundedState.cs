@@ -57,6 +57,7 @@ public class PlayerGroundedState : PlayerMovementState
     }
     protected override void OnContractWithGroundExit()
     {
+
         if (IsThereGroundUnderNearth())
         {
             return ;
@@ -74,7 +75,7 @@ public class PlayerGroundedState : PlayerMovementState
         }
     }
 
-    private bool IsThereGroundUnderNearth()
+    protected bool IsThereGroundUnderNearth()
     {
         BoxCollider GroundCheckColider = stateMachine.Player.coliderFloat.PlayerTriggerColiderData.GroundCheckColider;
         Vector3 GroundColiderInWorldSpaace = GroundCheckColider.bounds.center;

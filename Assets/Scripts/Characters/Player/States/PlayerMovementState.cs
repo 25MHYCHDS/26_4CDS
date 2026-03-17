@@ -30,7 +30,7 @@ public class PlayerMovementState : Istate
 
     public virtual void Enter()
     {
-         Debug.Log("State:"+ GetType().Name);
+        // Debug.Log("State:"+ GetType().Name);
 
          AddInputCallBack();
 
@@ -295,7 +295,6 @@ public class PlayerMovementState : Istate
         if (stateMachine.ReuseableData.MovementInput == Vector2.right)
         {
             angle += 30;
-            Debug.Log(1);
         }
         else 
         {

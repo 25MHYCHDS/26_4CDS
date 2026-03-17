@@ -1,0 +1,59 @@
+using UnityEngine;
+using UnityEngine.InputSystem;
+using UnityEngine.UI;
+
+public class DragTrigger : MonoBehaviour
+{
+    public GameObject InteractionUI;
+    public GameObject DragOGame;
+    public GameObject PCamera;
+    public GameObject DragGCamera;
+    public GameObject DragGCButton;
+    private bool IsInteract;
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            InteractionUI.SetActive(true);
+            IsInteract = true;
+        }
+    }
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            InteractionUI.GetComponent<Image>().color = Color.white;
+            InteractionUI.SetActive(false);
+            IsInteract =false;
+        }
+    }
+    private void Update()
+    {
+        if (IsInteract)
+        {
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                Cursor.visible = true;
+                DragOGame.SetActive(true);
+                InteractionUI.GetComponent<Image>().color = Color.gray;
+                PCamera.SetActive(false);
+                DragGCamera.SetActive(true);
+                DragGCButton.SetActive(true);
+                InteractionUI.SetActive(false);
+                Player.instance.moveStateMachine.Player.Input.gamePlayActions.Disable();
+            }
+        }
+    }
+
+    public void CloseDragG()
+    {
+        PCamera.SetActive(true);
+        DragGCamera.SetActive(false);
+        DragOGame.SetActive(false);
+        Cursor.visible = false;
+        DragGCButton.SetActive(true);
+        InteractionUI.GetComponent<Image>().color = Color.white;
+        Player.instance.moveStateMachine.Player.Input.gamePlayActions.Enable();
+    }
+}
