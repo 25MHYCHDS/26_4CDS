@@ -7148,7 +7148,7 @@ MonoBehaviour:
       - Value: 2
       - Value: 2
       - Value: 2
-      maxConnectionDistance: 0.24208494
+      maxConnectionDistance: 0.24208495
       userEdit: 0
     preBuildData:
       enabled: 0
@@ -18762,7 +18762,7 @@ MonoBehaviour:
   Focus: 0
   IsAiming: 0
   AimWaitTime: 1.2
-  MaxDistance: 20
+  MaxDistance: 12.5
   OffsetTime: 0.1
   CameraAimTime: 0.5
   MaxMouseDelta: 12
@@ -44491,7 +44491,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1689458072
 RectTransform:
   m_ObjectHideFlags: 0

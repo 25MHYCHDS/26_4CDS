@@ -216,7 +216,7 @@ MonoBehaviour:
       MediumForce: {x: 3, y: 5, z: 3}
       StrongForce: {x: 5, y: 5, z: 5}
     playerFallData:
-      LimitedFallData: 11.1
+      LimitedFallData: 10
       MinDisanceToHanrdStop: 3
   PlayerAnimationData:
     GrounedParameterName: Grounded

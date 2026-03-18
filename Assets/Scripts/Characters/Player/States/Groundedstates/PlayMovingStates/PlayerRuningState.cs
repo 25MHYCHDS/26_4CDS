@@ -41,14 +41,13 @@ public class PlayerRuningState : PlayerMovingState
     public override void PhysicsUpdate()
     {
         base.PhysicsUpdate();
-        //Vector3 CapsuleColiderCenterInWorld = stateMachine.Player.coliderFloat.CColiderD.Pcollider.bounds.center;
+        Vector3 CapsuleColiderCenterInWorld = stateMachine.Player.coliderFloat.CColiderD.Pcollider.bounds.center;
 
         //if (IsThereGroundUnderNearth())
         //{
         //    return;
         //}
 
-        //base.OnContractWithGroundExit();
         //Ray RayFromCapsuleColiderButton = new Ray(CapsuleColiderCenterInWorld -
         //    stateMachine.Player.coliderFloat.CColiderD.ColliderVerticalExtent, Vector3.down);
         //if (!Physics.Raycast(RayFromCapsuleColiderButton, out _, GroundedData.RayDistanceToFall,

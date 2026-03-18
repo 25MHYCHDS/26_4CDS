@@ -59,7 +59,7 @@ public class CameraManager : MonoBehaviour
                 EnemyScreenP = new Vector2(Camera.main.WorldToScreenPoint(EnemyLookPoint.transform.localToWorldMatrix.GetPosition()).x,
                 Camera.main.WorldToScreenPoint(EnemyLookPoint.transform.localToWorldMatrix.GetPosition()).y);
 
-                if (JudgeEnemyScreenP() || IsAiming)
+                if (JudgeEnemyOutScreenP() || IsAiming)
                 {
                     CameraAimCoolDown = true;
 
@@ -93,6 +93,7 @@ public class CameraManager : MonoBehaviour
                     UpdateTargetRotateData(GetTargetDirectionAngle(GetTargetDirection(EnemyLookPoint.transform.localToWorldMatrix.GetPosition(), Player.instance.transform.position)));
 
                     RotateToTagetDri();
+                    Debug.Log(1);
                 }
                 else
                 {
@@ -199,9 +200,9 @@ public class CameraManager : MonoBehaviour
         PositionComposer.TargetOffset.y = Mathf.SmoothDampAngle(PositionComposer.TargetOffset.y,OffsetY, ref CurrentV, OffsetTime);
     }
 
-    private bool JudgeEnemyScreenP()
+    private bool JudgeEnemyOutScreenP()
     {
-        return (EnemyScreenP.x > CameraDeadZone.x || CameraDeadZone.x < 0) || (EnemyScreenP.y > CameraDeadZone.y || CameraDeadZone.y < 0);
+        return (EnemyScreenP.x > CameraDeadZone.x || EnemyScreenP.x < 0) || (EnemyScreenP.y > CameraDeadZone.y || EnemyScreenP.y < 0);
     }
     private bool JudgeEnemyScreenPC()
     {

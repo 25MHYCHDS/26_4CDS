@@ -47,19 +47,18 @@ public class PlayerSprintingState : PlayerMovingState
 
         Vector3 CapsuleColiderCenterInWorld = stateMachine.Player.coliderFloat.CColiderD.Pcollider.bounds.center;
 
-        if (IsThereGroundUnderNearth())
-        {
-            return;
-        }
-        base.OnContractWithGroundExit();
+        //if (IsThereGroundUnderNearth())
+        //{
+        //    return;
+        //}
 
-        Ray RayFromCapsuleColiderButton = new Ray(CapsuleColiderCenterInWorld -
-            stateMachine.Player.coliderFloat.CColiderD.ColliderVerticalExtent, Vector3.down);
-        if (!Physics.Raycast(RayFromCapsuleColiderButton, out _, GroundedData.RayDistanceToFall,
-            stateMachine.Player.playerLayerData.GroundLayer, QueryTriggerInteraction.Ignore))
-        {
-            OnFall();
-        }
+        //Ray RayFromCapsuleColiderButton = new Ray(CapsuleColiderCenterInWorld -
+        //    stateMachine.Player.coliderFloat.CColiderD.ColliderVerticalExtent, Vector3.down);
+        //if (!Physics.Raycast(RayFromCapsuleColiderButton, out _, GroundedData.RayDistanceToFall,
+        //    stateMachine.Player.playerLayerData.GroundLayer, QueryTriggerInteraction.Ignore))
+        //{
+        //    OnFall();
+        //}
     }
 
     public override void Exit()
