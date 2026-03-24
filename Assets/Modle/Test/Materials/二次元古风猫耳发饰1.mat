@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: FACE_TMP
+  m_Name: "\u4E8C\u6B21\u5143\u53E4\u98CE\u732B\u8033\u53D1\u99701"
   m_Shader: {fileID: 4800000, guid: 908ce4d8929cb744a8f14f657b38306a, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
@@ -25,7 +25,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _BaseMap:
-        m_Texture: {fileID: 2800000, guid: 4bb1245e2a65c584497db184487b255f, type: 3}
+        m_Texture: {fileID: 2800000, guid: 21ffb5dcd218a9d4cafe414367bf87f1, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BumpMap:
@@ -49,7 +49,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 4bb1245e2a65c584497db184487b255f, type: 3}
+        m_Texture: {fileID: 2800000, guid: 21ffb5dcd218a9d4cafe414367bf87f1, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:

@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: c6e1c5b7b8983194486a46f0599512bf
+guid: 3b4048d0489e0ab4781df19acad194bb
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
@@ -8,7 +8,7 @@ ModelImporter:
     materialImportMode: 2
     materialName: 0
     materialSearch: 1
-    materialLocation: 1
+    materialLocation: 0
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
@@ -30,7 +30,7 @@ ModelImporter:
     extraExposedTransformPaths: []
     extraUserProperties: []
     clipAnimations: []
-    isReadable: 0
+    isReadable: 1
   meshes:
     lODScreenPercentages: []
     globalScale: 1
@@ -39,16 +39,16 @@ ModelImporter:
     useSRGBMaterialColor: 1
     sortHierarchyByName: 1
     importPhysicalCameras: 1
-    importVisibility: 1
-    importBlendShapes: 1
-    importCameras: 1
-    importLights: 1
+    importVisibility: 0
+    importBlendShapes: 0
+    importCameras: 0
+    importLights: 0
     nodeNameCollisionStrategy: 1
     fileIdsGeneration: 2
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
-    keepQuads: 0
+    keepQuads: 1
     weldVertices: 1
     bakeAxisConversion: 0
     preserveHierarchy: 0
@@ -208,7 +208,7 @@ ModelImporter:
         value: {x: 0, y: 0, z: 0}
         length: 0
         modified: 0
-    - boneName: LowerArm.L
+    - boneName: Hand.L
       humanName: LeftHand
       limit:
         min: {x: 0, y: 0, z: 0}
@@ -216,7 +216,7 @@ ModelImporter:
         value: {x: 0, y: 0, z: 0}
         length: 0
         modified: 0
-    - boneName: LowerArm.R
+    - boneName: Hand.R
       humanName: RightHand
       limit:
         min: {x: 0, y: 0, z: 0}
@@ -464,6 +464,14 @@ ModelImporter:
         value: {x: 0, y: 0, z: 0}
         length: 0
         modified: 0
+    - boneName: "\u80F8\u90E8"
+      humanName: Chest
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
     - boneName: "\u811A.L_end"
       humanName: LeftToes
       limit:
@@ -480,22 +488,14 @@ ModelImporter:
         value: {x: 0, y: 0, z: 0}
         length: 0
         modified: 0
-    - boneName: "\u80F8\u90E8"
-      humanName: Chest
-      limit:
-        min: {x: 0, y: 0, z: 0}
-        max: {x: 0, y: 0, z: 0}
-        value: {x: 0, y: 0, z: 0}
-        length: 0
-        modified: 0
     skeleton:
-    - name: 4C1(Clone)
+    - name: 4C(Clone)
       parentName: 
       position: {x: 0, y: 0, z: 0}
       rotation: {x: 0, y: 0, z: 0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: "\u5C41\u80A1"
-      parentName: 4C1(Clone)
+      parentName: 4C(Clone)
       position: {x: -0, y: 0, z: 0}
       rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
       scale: {x: 100, y: 100, z: 100}
@@ -617,7 +617,7 @@ ModelImporter:
     - name: qz_0_1
       parentName: "\u8179\u90E8"
       position: {x: -0.00046958428, y: 0.0004789011, z: 0.0007084409}
-      rotation: {x: 0.9757507, y: -0.12798296, z: -0.15055037, w: 0.09415711}
+      rotation: {x: 0.9757507, y: -0.12798294, z: -0.15055037, w: 0.0941571}
       scale: {x: 1.0000015, y: 1.0000002, z: 1.0000017}
     - name: qz_1_1
       parentName: qz_0_1
@@ -1047,7 +1047,7 @@ ModelImporter:
     - name: qz_1_9
       parentName: qz_0_9
       position: {x: -5.5879353e-11, y: 0.0005189618, z: -9.313225e-11}
-      rotation: {x: -0.0019366804, y: -0.00975436, z: 0.014181994, w: 0.99985}
+      rotation: {x: -0.0019366803, y: -0.00975436, z: 0.014181993, w: 0.99985}
       scale: {x: 0.9999999, y: 1, z: 0.99999994}
     - name: qz_2_9
       parentName: qz_1_9
@@ -1217,7 +1217,7 @@ ModelImporter:
     - name: qz_3_12
       parentName: qz_2_12
       position: {x: -5.587935e-10, y: 0.00048183187, z: 3.5390257e-10}
-      rotation: {x: -0.014417777, y: -0.025945581, z: 0.023944523, w: 0.9992725}
+      rotation: {x: -0.014417776, y: -0.025945581, z: 0.023944521, w: 0.9992725}
       scale: {x: 1, y: 0.99999994, z: 1}
     - name: qz_4_12
       parentName: qz_3_12
@@ -1427,22 +1427,22 @@ ModelImporter:
     - name: "\u80A9.L"
       parentName: "\u80F8\u90E8"
       position: {x: -0.00042454424, y: 0.0027378856, z: 0.00018987409}
-      rotation: {x: 0.78629637, y: -0.5599925, z: -0.19460055, w: -0.17400314}
+      rotation: {x: 0.7863694, y: -0.5598934, z: -0.19460793, w: -0.1739839}
       scale: {x: 1.0000001, y: 1.0000002, z: 1.0000001}
     - name: "\u5927\u81C2.L"
       parentName: "\u80A9.L"
-      position: {x: 0.00000017572891, y: 0.00070400577, z: -0.000000056112178}
-      rotation: {x: -0.0639588, y: 0.8717674, z: 0.15093942, w: 0.4616798}
+      position: {x: -0.0000000011734664, y: 0.00070387614, z: -4.4703483e-10}
+      rotation: {x: -0.06595269, y: 0.8851858, z: 0.11458665, w: 0.44605654}
       scale: {x: 0.99999994, y: 0.9999998, z: 1}
     - name: "\u5C0F\u81C2.L"
       parentName: "\u5927\u81C2.L"
-      position: {x: -0.00000005139737, y: 0.002458253, z: 0.00000024741166}
-      rotation: {x: -0.05078093, y: -0.29471892, z: -0.061146475, w: 0.95227265}
+      position: {x: 7.4505804e-11, y: 0.002458206, z: -4.4703483e-10}
+      rotation: {x: -0.0678401, y: -0.29394388, z: -0.038039554, w: 0.95265305}
       scale: {x: 0.99999994, y: 1, z: 0.99999994}
     - name: LowerArm.L
       parentName: "\u5C0F\u81C2.L"
-      position: {x: -0.000037924114, y: 0.0017152376, z: 0.00007325133}
-      rotation: {x: 0.015440572, y: 0.0899457, z: 0.019670265, w: 0.9956327}
+      position: {x: -0.000037962196, y: 0.001715226, z: 0.000073153205}
+      rotation: {x: -0.004216778, y: 0.08659818, z: 0.010615865, w: 0.99617785}
       scale: {x: 0.9999999, y: 1, z: 0.99999994}
     - name: Hand.L
       parentName: LowerArm.L
@@ -1452,7 +1452,7 @@ ModelImporter:
     - name: IndexPromixal.L
       parentName: Hand.L
       position: {x: 0.00028520622, y: 0.0006831211, z: -0.00011281148}
-      rotation: {x: -0.00084903586, y: 0.99941826, z: -0.032543898, w: -0.010162417}
+      rotation: {x: -0.0008490358, y: 0.99941826, z: -0.032543894, w: -0.010162417}
       scale: {x: 1.0000001, y: 1.0000002, z: 1.0000002}
     - name: IndexIntermediate.L
       parentName: IndexPromixal.L
@@ -1532,12 +1532,12 @@ ModelImporter:
     - name: ThumbPromixal.L
       parentName: Hand.L
       position: {x: 0.00025131303, y: 0.00023273892, z: -0.000025719588}
-      rotation: {x: 0.35904503, y: 0.8211267, z: -0.26711804, w: 0.3542396}
+      rotation: {x: 0.3987596, y: 0.80206674, z: -0.22291148, w: 0.38469502}
       scale: {x: 1, y: 1, z: 1.0000001}
     - name: ThumbIntermediate.L
       parentName: ThumbPromixal.L
       position: {x: 5.399488e-10, y: 0.00032137008, z: 0.0000000012072269}
-      rotation: {x: -0.03426774, y: -0.0009934304, z: -0.008981733, w: 0.9993718}
+      rotation: {x: -0.034264687, y: -0.0009934601, z: -0.008977381, w: 0.999372}
       scale: {x: 1, y: 0.99999994, z: 0.99999994}
     - name: ThumbDistal.L
       parentName: ThumbIntermediate.L
@@ -1552,27 +1552,27 @@ ModelImporter:
     - name: "\u80A9.R"
       parentName: "\u80F8\u90E8"
       position: {x: 0.00057659514, y: 0.002689565, z: 0.00034449104}
-      rotation: {x: 0.80934787, y: 0.57800865, z: 0.07345818, w: -0.07393247}
+      rotation: {x: 0.80939895, y: 0.57793707, z: 0.07345154, w: -0.073939025}
       scale: {x: 0.9999999, y: 0.9999999, z: 0.99999994}
     - name: "\u5927\u81C2.R"
       parentName: "\u80A9.R"
-      position: {x: -0.00000028108482, y: 0.0008152275, z: 6.075425e-10}
-      rotation: {x: -0.12756865, y: -0.67915845, z: -0.10971123, w: 0.7144463}
+      position: {x: -6.5803757e-10, y: 0.0008150927, z: -4.6566128e-12}
+      rotation: {x: -0.08735459, y: -0.68884057, z: -0.08789008, w: 0.714243}
       scale: {x: 1.0000001, y: 1.0000002, z: 1}
     - name: "\u5C0F\u81C2.R"
       parentName: "\u5927\u81C2.R"
-      position: {x: -0.0000000055224514, y: 0.0024032695, z: 0.00000021513551}
-      rotation: {x: 0.03807286, y: 0.48001587, z: -0.0047010323, w: 0.8764206}
+      position: {x: 1.8626451e-11, y: 0.0024032707, z: 9.435461e-10}
+      rotation: {x: 0.060666785, y: 0.48538312, z: -0.040671896, w: 0.8712454}
       scale: {x: 1.0000001, y: 0.99999994, z: 1}
     - name: LowerArm.R
       parentName: "\u5C0F\u81C2.R"
-      position: {x: 0.00007706379, y: 0.0013965776, z: 0.0000028595096}
-      rotation: {x: -0.04651012, y: -0.46690863, z: 0.04094575, w: 0.8821319}
+      position: {x: 0.00007717566, y: 0.0013965776, z: 0.0000027927756}
+      rotation: {x: -0.16570462, y: -0.4802106, z: -0.00018146387, w: 0.8613593}
       scale: {x: 0.99999994, y: 0.9999999, z: 1}
     - name: Hand.R
       parentName: LowerArm.R
       position: {x: -0.000003722445, y: 0.00088154885, z: 0.000008506784}
-      rotation: {x: 0.030513646, y: 0.0042367913, z: 0.000037173813, w: 0.99952537}
+      rotation: {x: 0.03727446, y: 0.0034105773, z: 0.0002935305, w: 0.9992993}
       scale: {x: 1, y: 1, z: 0.99999994}
     - name: IndexPromixal.R
       parentName: Hand.R
@@ -1616,17 +1616,17 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
     - name: MiddlePromixal.R
       parentName: Hand.R
-      position: {x: -0.00005103061, y: 0.0007214687, z: -0.000083426356}
+      position: {x: -0.000048141395, y: 0.00073792494, z: -0.00006833813}
       rotation: {x: -0.004808591, y: 0.9988998, z: -0.03208367, w: 0.033863477}
       scale: {x: 1, y: 0.9999997, z: 1.0000001}
     - name: MiddleIntermediate.R
       parentName: MiddlePromixal.R
-      position: {x: -3.259629e-11, y: 0.00042136203, z: -8.4372004e-10}
+      position: {x: -1.8626451e-11, y: 0.00042136243, z: 0.0000000012404779}
       rotation: {x: 0.0010263096, y: -0.00025499554, z: 0.0040627746, w: 0.9999912}
       scale: {x: 1, y: 1, z: 0.99999994}
     - name: MiddleDistal.R
       parentName: MiddleIntermediate.R
-      position: {x: 6.984919e-12, y: 0.00024681963, z: 8.518691e-10}
+      position: {x: 2.4447217e-11, y: 0.00024681893, z: -5.480251e-10}
       rotation: {x: 0.0043745944, y: -0.00056636607, z: 0.000120389595, w: 0.9999903}
       scale: {x: 0.99999994, y: 1, z: 1}
     - name: MiddleDistal.R_end
@@ -1647,7 +1647,7 @@ ModelImporter:
     - name: RingDistal.R
       parentName: RingIntermediate.R
       position: {x: 1.1641532e-12, y: 0.00023401392, z: -8.598727e-10}
-      rotation: {x: 0.004367394, y: -0.00056595635, z: 0.00012340184, w: 0.9999903}
+      rotation: {x: 0.0043673934, y: -0.00056595635, z: 0.00012340183, w: 0.9999903}
       scale: {x: 0.9999999, y: 0.99999994, z: 1}
     - name: RingDistal.R_end
       parentName: RingDistal.R
@@ -1657,12 +1657,12 @@ ModelImporter:
     - name: ThumbPromixal.R
       parentName: Hand.R
       position: {x: -0.00024913083, y: 0.00022986782, z: 0.000013747089}
-      rotation: {x: -0.3958935, y: 0.83286476, z: -0.21237968, w: -0.32326388}
+      rotation: {x: -0.42068404, y: 0.81927073, z: -0.16712897, w: -0.35197797}
       scale: {x: 0.99999994, y: 1, z: 1}
     - name: ThumbIntermediate.R
       parentName: ThumbPromixal.R
       position: {x: -3.367313e-10, y: 0.00031740576, z: -0.0000000010908116}
-      rotation: {x: -0.031471945, y: -0.011792448, z: 0.016273018, w: 0.9993026}
+      rotation: {x: -0.03147685, y: -0.011792357, z: 0.016267175, w: 0.9993025}
       scale: {x: 0.9999999, y: 0.99999994, z: 0.99999994}
     - name: ThumbDistal.R
       parentName: ThumbIntermediate.R
@@ -1900,7 +1900,7 @@ ModelImporter:
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: "\u88D9"
-      parentName: 4C1(Clone)
+      parentName: 4C(Clone)
       position: {x: -0, y: 0, z: 0}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
@@ -1916,13 +1916,13 @@ ModelImporter:
     hasTranslationDoF: 0
     hasExtraRoot: 1
     skeletonHasParents: 1
-  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  lastHumanDescriptionAvatarSource: {fileID: 9000000, guid: a155aa3703f027940a649138578b1608, type: 2}
   autoGenerateAvatarMappingIfUnspecified: 1
   animationType: 3
   humanoidOversampling: 1
-  avatarSetup: 1
+  avatarSetup: 2
   addHumanoidExtraRootOnlyWhenUsingAvatar: 1
-  importBlendShapeDeformPercent: 1
+  importBlendShapeDeformPercent: 0
   remapMaterialsIfMaterialImportModeIsNone: 0
   additionalBone: 0
   userData: 
