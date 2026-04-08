@@ -20,10 +20,31 @@ public class SoundManager : MonoBehaviour
             Destroy(gameObject);
         }
     }
+
+    private void Start()
+    {
+        repeatTheme();
+    }
+
+    public void repeatTheme()
+    {
+        InvokeRepeating("PlayTheme", 0f, 124f);
+    }
+
+    private void PlayTheme()
+    {
+        PlayMusic("BGM");
+    }
+
+    private void Update()
+    {
+
+    }
+
     public void PlayMusic(string name)
     {
         Sound s = Array.Find(MusicSounds, x => x.Name == name);
-        if (s != null)
+        if (s == null)
         {
             Debug.Log("无法找到音乐");
         }
@@ -36,7 +57,7 @@ public class SoundManager : MonoBehaviour
     public void PlaySfx(string name)
     {
         Sound s = Array.Find(SfxSounds, x => x.Name == name);
-        if (s != null)
+        if (s == null)
         {
             Debug.Log("无法找到音效");
         }
@@ -46,4 +67,32 @@ public class SoundManager : MonoBehaviour
             SfxSource.Play();
         }
     }
+
+
+    //暂停和调整声音的方法
+    public void StopMusic()
+    {
+        MusicSource.Stop();
+    }
+    public void StopSFX()
+    {
+        SfxSource.Stop();
+    }
+    public void ToggleMusic()
+    {
+        MusicSource.mute = !MusicSource.mute;
+    }
+    public void ToggleSfx()
+    {
+        SfxSource.mute = !SfxSource.mute;
+    }
+    public void MusicVolume(float volume)
+    {
+        MusicSource.volume = volume;
+    }
+    public void SfxVolume(float volume)
+    {
+        SfxSource.volume = volume;
+    }
 }
+
