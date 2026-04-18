@@ -3,18 +3,17 @@ using UnityEngine;
 public class GridCell : MonoBehaviour
 {
     public bool isRevealed = false;
-    private MeshRenderer meshRenderer;
+    private GameObject fk;
 
     void Awake()
     {
-        meshRenderer = GetComponent<MeshRenderer>();
-        meshRenderer.enabled = false;
+        fk = transform.Find("fk").gameObject; fk.SetActive(false);
     }
 
     public void Reveal()
     {
         if (isRevealed) return;
         isRevealed = true;
-        meshRenderer.enabled = true;
+        fk.SetActive(true);
     }
 }

@@ -1,4 +1,3 @@
-using UnityEditorInternal;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -11,6 +10,8 @@ public class PlayerLightAttackingState : PlayerGroundedState
     public override void Enter()
     {
         base.Enter();
+        SoundManager.instance.PlayESfx("Interact");
+
         stateMachine.ReuseableData.DecelerateModifier = GroundedData.BaseStopData.HardDecelarateForce;
         stateMachine.ReuseableData.MovementSpeedModifier = stateMachine.ReuseableData.MovementSpeedModifier / 3;
 

@@ -21,6 +21,8 @@ public class PlayerDashState : PlayerMovingState
 
         base.Enter();
 
+        SoundManager.instance.PlayPSfx("Dash");
+
         StartAnimation(stateMachine.Player.animationData.DashParameterHash);
 
         stateMachine.ReuseableData.rotationTime.y = DashData.DashRotationTime;

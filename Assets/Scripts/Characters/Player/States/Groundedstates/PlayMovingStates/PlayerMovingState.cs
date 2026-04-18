@@ -12,12 +12,16 @@ public class PlayerMovingState : PlayerGroundedState
     {
         base.Enter();
 
+        SoundManager.instance.PlayWalk();
+
         StartAnimation(stateMachine.Player.animationData.MovingParameterHash);
     }
 
     public override void Exit()
     {
         base.Exit();
+
+        SoundManager.instance.StopSFX();
 
         EndAnimation(stateMachine.Player.animationData.MovingParameterHash);
     }

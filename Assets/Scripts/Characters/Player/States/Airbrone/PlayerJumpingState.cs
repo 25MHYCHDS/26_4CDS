@@ -22,6 +22,8 @@ public class PlayerJumpingState : PlayerAirbroneState
     {
         base.Enter();
 
+        SoundManager.instance.PlayESfx("Interact");
+
         stateMachine.ReuseableData.MovementSpeedModifier = 0f;
 
         stateMachine.ReuseableData.DecelerateModifier = JumpingData.DecelerationForce;

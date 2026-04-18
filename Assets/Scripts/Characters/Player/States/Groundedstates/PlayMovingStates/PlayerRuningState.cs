@@ -26,8 +26,6 @@ public class PlayerRuningState : PlayerMovingState
     }
     public override void Update()
     {
-
-        base.Update();
         if (!stateMachine.ReuseableData.ShouldWalk)
         {
             return;

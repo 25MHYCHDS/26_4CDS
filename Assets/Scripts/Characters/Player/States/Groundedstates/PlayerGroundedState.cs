@@ -163,7 +163,6 @@ public class PlayerGroundedState : PlayerMovementState
         base.AddInputCallBack();
         stateMachine.Player.Input.gamePlayActions.Jump.started += OnJumpStated;
         stateMachine.Player.Input.gamePlayActions.Dish.canceled += OnDashStated;
-        stateMachine.Player.Input.gamePlayActions.LightAttack.started += OnLightAttack;
     }
 
     protected override void RemoveInputCallBack()
@@ -171,7 +170,6 @@ public class PlayerGroundedState : PlayerMovementState
         base.RemoveInputCallBack();
         stateMachine.Player.Input.gamePlayActions.Jump.started -= OnJumpStated;
         stateMachine.Player.Input.gamePlayActions.Dish.canceled -= OnDashStated;
-        stateMachine.Player.Input.gamePlayActions.LightAttack.started -= OnLightAttack;
     }
 
     protected virtual void UpdateBuffedInput()

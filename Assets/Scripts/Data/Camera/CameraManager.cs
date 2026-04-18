@@ -1,6 +1,4 @@
-using System;
 using Unity.Cinemachine;
-using UnityEditorInternal;
 using UnityEngine;
 
 public class CameraManager : MonoBehaviour
@@ -93,7 +91,6 @@ public class CameraManager : MonoBehaviour
                     UpdateTargetRotateData(GetTargetDirectionAngle(GetTargetDirection(EnemyLookPoint.transform.localToWorldMatrix.GetPosition(), Player.instance.transform.position)));
 
                     RotateToTagetDri();
-                    Debug.Log(1);
                 }
                 else
                 {
