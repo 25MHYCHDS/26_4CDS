@@ -10,6 +10,7 @@ public class DragTrigger : MonoBehaviour
     public GameObject PCamera;
     public GameObject DragGCamera;
     public GameObject DragGCButton;
+    public string Shu;
     private bool IsInteract;
 
    
@@ -73,6 +74,8 @@ public class DragTrigger : MonoBehaviour
         Player.instance.moveStateMachine.Player.Input.gamePlayActions.Enable();
 
         pnpc1.instance.IsStudy = true;
+
+        AIchatManager.Instance.SetAIP(Shu);
     }
 
     IEnumerator TS6()

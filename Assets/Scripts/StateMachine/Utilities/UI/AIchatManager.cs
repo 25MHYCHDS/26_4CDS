@@ -4,19 +4,33 @@ public class AIchatManager : MonoBehaviour
 {
     public static AIchatManager Instance;
     public GameObject Panel;
-    public char[] AIP2;
-    public char[] AIP3;
+    public string AIP2;
+    public string AIP3;
 
     private void Awake()
     {
         Instance = this;
     }
-    public void SetAIP2()
+    public void SetAIP(string shu)
     {
-        Panel.GetComponent<DeepSeekAPI>().npcCharacter.personalityPrompt = AIP2.ToString();
+        if(shu == "2")
+        {
+            Panel.GetComponent<DeepSeekAPI>().npcCharacter.personalityPrompt = AIP2;
+            Panel.SetActive(true);
+        }
+        if (shu == "3")
+        {
+            Panel.GetComponent<DeepSeekAPI>().npcCharacter.personalityPrompt = AIP3;
+            Panel.SetActive(true);
+        }
     }
-    public void SetAIP3()
+
+    public void closeAIC()
     {
-        Panel.GetComponent<DeepSeekAPI>().npcCharacter.personalityPrompt = AIP3.ToString();
+       // Panel.SetActive(false);
+    }
+    public void openAIC()
+    {
+        Panel.SetActive(true);
     }
 }
